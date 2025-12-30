@@ -31,7 +31,7 @@ const NotesCard = ({ item }: NotesCardProps) => {
     if (!noteToEdit) return;
     setIsEdit(true);
     setSelectedNote(noteToEdit);
-    setNewNote(selectedNote?.body ?? "");
+    setNewNote(noteToEdit?.body);
   };
   const deleteNote = (id: number): void => {
     setNotes(notes.filter((note) => note.id !== id));
